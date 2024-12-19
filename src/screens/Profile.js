@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, TouchableOpacity, Image, Linking} from 'react-native';
 import {createStaticNavigation, useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -7,6 +7,10 @@ import Svg, {Ellipse, Path, Rect} from 'react-native-svg';
 
 function ProfileScreen() {
   const navigation = useNavigation();
+
+  const handlePress = url => {
+    Linking.openURL(url);
+  };
 
   return (
     <View style={{backgroundColor: '#ffffff', padding: 10, flex: 1}}>
@@ -168,7 +172,8 @@ function ProfileScreen() {
                 alignItems: 'center',
               }}>
               <View style={{width: 140}}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => handlePress('https://github.com/Yoanvari')}>
                   <Text
                     style={{
                       backgroundColor: 'white',
@@ -186,7 +191,10 @@ function ProfileScreen() {
               </View>
               <View style={{width: 20}}></View>
               <View style={{width: 137}}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    handlePress('https://yoanvari.my.canva.site/')
+                  }>
                   <Text
                     style={{
                       backgroundColor: '#125eea',
