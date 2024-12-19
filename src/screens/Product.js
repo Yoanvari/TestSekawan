@@ -53,27 +53,29 @@ function ProductScreen() {
       <View style={styles.infoContainer}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.price}>${item.price.toFixed(2)}</Text>
-        <Text style={styles.rating}>Rating: {item.rating}</Text>
+        <Text style={styles.rating}>
+          <Icon name="star" size={15} color="gold" /> {item.rating}
+        </Text>
       </View>
     </TouchableOpacity>
   );
 
   return (
-    <View style={{backgroundColor: '#ffffff'}}>
+    <View style={{backgroundColor: '#faf4f2'}}>
       <View
         style={{
-          backgroundColor: '#191919',
+          backgroundColor: '#d3cdcc',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
           paddingHorizontal: 10,
         }}>
         <TouchableOpacity onPress={() => navigation.pop()}>
-          <Icon name="arrow-back-outline" size={30} color="#FFFFFF" />
+          <Icon name="arrow-back-outline" size={30} color="#706b8d" />
         </TouchableOpacity>
         <Text
           style={{
-            color: 'white',
+            color: '#706b8d',
             padding: 15,
             textAlign: 'center',
             fontSize: 25,
@@ -82,7 +84,7 @@ function ProductScreen() {
           }}>
           Product Page
         </Text>
-        <Icon name="arrow-back-outline" size={30} color="#191919" />
+        <Icon name="arrow-back-outline" size={30} color="#d3cdcc" />
       </View>
       <FlatList
         data={products}
@@ -134,7 +136,7 @@ const styles = StyleSheet.create({
     marginVertical: 4,
   },
   rating: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#555',
   },
 });

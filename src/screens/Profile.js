@@ -226,7 +226,7 @@ function ProfileScreen() {
           }}>
           About Me:
         </Text>
-        <Text style={{textAlign: 'justify', fontSize: 15, fontWeight: '500'}}>
+        <Text style={{textAlign: 'justify', fontSize: 15, fontWeight: '400'}}>
           I am an Informatics Engineering student with experience in developing
           web and mobile application as a full-stack developer. Proficient in
           using technologies such as Laravel, Flutter, and MySQL to create

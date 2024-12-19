@@ -13,12 +13,12 @@ function HomeScreen() {
   const navigation = useNavigation();
 
   return (
-    <View style={{flex: 1, backgroundColor: '#191919'}}>
-      <StatusBar backgroundColor={'#191919'} />
-      <View style={{backgroundColor: '#191919'}}>
+    <View style={{flex: 1, backgroundColor: '#d3cdcc'}}>
+      <StatusBar backgroundColor={'#d3cdcc'} />
+      <View style={{backgroundColor: '#d3cdcc'}}>
         <Text
           style={{
-            color: 'white',
+            color: '#706b8d',
             padding: 15,
             textAlign: 'center',
             fontSize: 25,
@@ -29,16 +29,17 @@ function HomeScreen() {
         </Text>
       </View>
       <View
-        style={{flex: 1, backgroundColor: '#222222', justifyContent: 'center'}}>
+        style={{flex: 1, backgroundColor: '#faf4f2', justifyContent: 'center'}}>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('Product')}>
           <Text
             style={{
-              color: 'white',
+              color: '#706b8d',
               fontWeight: '500',
               letterSpacing: 0.5,
               textAlign: 'center',
+              fontWeight: '700',
             }}>
             PRODUCT
           </Text>
@@ -49,10 +50,11 @@ function HomeScreen() {
           onPress={() => navigation.navigate('Profile')}>
           <Text
             style={{
-              color: 'white',
+              color: '#706b8d',
               fontWeight: '500',
               letterSpacing: 0.5,
               textAlign: 'center',
+              fontWeight: '700',
             }}>
             PROFILE
           </Text>
@@ -64,7 +66,7 @@ function HomeScreen() {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: 'black',
+    backgroundColor: '#ede7e5',
     borderRadius: 15,
     marginHorizontal: 60,
     paddingHorizontal: 20,
