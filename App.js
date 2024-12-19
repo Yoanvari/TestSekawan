@@ -6,7 +6,6 @@ import HomeScreen from './src/screens/Home';
 import DetailScreen from './src/screens/Detail';
 import ProfileScreen from './src/screens/Profile';
 import ProductScreen from './src/screens/Product';
-import TestScreen from './src/screens/Test';
 
 const RootStack = createNativeStackNavigator({
   initialRouteName: 'Home',
@@ -16,7 +15,6 @@ const RootStack = createNativeStackNavigator({
     Detail: DetailScreen,
     Profile: ProfileScreen,
     Product: ProductScreen,
-    Test: TestScreen,
   },
 });
 
