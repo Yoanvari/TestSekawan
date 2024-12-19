@@ -6,6 +6,7 @@ import {
   FlatList,
   StyleSheet,
   Image,
+  ActivityIndicator,
 } from 'react-native';
 import {getProducts} from '../services/Api';
 import {createStaticNavigation, useNavigation} from '@react-navigation/native';
@@ -15,6 +16,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 function ProductScreen() {
   const navigation = useNavigation();
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -23,11 +25,21 @@ function ProductScreen() {
         setProducts(productData);
       } catch (error) {
         console.error('Failed to fetch products:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchProducts();
   }, []);
+
+  if (loading) {
+    return (
+      <View style={{flex: 1, justifyContent: 'center'}}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
+  }
 
   const handleProductPress = productId => {
     navigation.navigate('Detail', {productId});
